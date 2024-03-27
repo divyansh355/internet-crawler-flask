@@ -2,9 +2,15 @@
 
 <p id="description">A Flask app that’s like a digital spider 🕷️ crawling the web 🌐 based on user queries. Whether you’re hunting for information entertainment or anything else 🐱 my app’s got you covered! 🙌</p>
 
+<p align="center"><img src="http://ForTheBadge.com/images/badges/made-with-python.svg" alt="shields"></p>
+
 <h2>🚀 Demo</h2>
 
 [https://internet-crawler-beta.onrender.com/](https://internet-crawler-beta.onrender.com/)
+
+<h2>Project Screenshots:</h2>
+
+<img src="https://bg-so-1.zippyimage.com/2024/03/27/63a983e04a466582fbbfb9606ce5c57a.png" alt="project-screenshot" width="100%" height="400/">
 
   
   
