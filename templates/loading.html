@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <style>
+    .main {
+      height: 100vh;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+  </style>
+  <!-- Poppins Font Classes -->
+  <style>
+     @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,400;0,500;1,400;1,500&display=swap');
+     
+    .poppins-extralight {
+      font-family: "Poppins", sans-serif;
+      font-weight: 200;
+      font-style: normal;
+    }
+
+    .poppins-regular {
+      font-family: "Poppins", sans-serif;
+      font-weight: 400;
+      font-style: normal;
+    }
+
+    .poppins-medium {
+      font-family: "Poppins", sans-serif;
+      font-weight: 500;
+      font-style: normal;
+    }
+
+    .poppins-regular-italic {
+      font-family: "Poppins", sans-serif;
+      font-weight: 400;
+      font-style: italic;
+    }
+
+    .poppins-medium-italic {
+      font-family: "Poppins", sans-serif;
+      font-weight: 500;
+      font-style: italic;
+    }
+  </style>
+  <!-- Loader CSS -->
+  <style>
+    /*
+    * Prefixed by https://autoprefixer.github.io
+    * PostCSS: v8.4.14,
+    * Autoprefixer: v10.4.7
+    * Browsers: last 4 version
+    */
+
+    .sharingon {
+      width: 6em;
+      height: 6em;
+      background-color: red;
+      border: 6px solid black;
+      -webkit-animation: rot 1s ease-in-out infinite;
+      animation: rot 1s ease-in-out infinite;
+    }
+
+    .ring {
+      position: absolute;
+      content: "";
+      left: 50%;
+      top: 50%;
+      width: 3.5em;
+      height: 3.5em;
+      border: 4px solid rgb(110, 13, 13, 0.5);
+      -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+    }
+
+    .sharingon,
+    .ring,
+    .to,
+    .circle {
+      border-radius: 50%;
+    }
+
+    .to,
+    .circle {
+      position: absolute;
+      content: "";
+      width: 0.9em;
+      height: 0.9em;
+      background-color: black;
+    }
+
+    .to:nth-child(1) {
+      top: -0.5em;
+      left: 50%;
+      -webkit-transform: translate(-40%);
+      -ms-transform: translate(-40%);
+      transform: translate(-40%);
+    }
+
+    .to::before {
+      content: "";
+      position: absolute;
+      top: -0.5em;
+      right: -0.2em;
+      width: 1.1em;
+      height: 0.9em;
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+      border-left: 16px solid black;
+      border-radius: 100% 0 0;
+    }
+
+    .to:nth-child(2) {
+      bottom: 0.5em;
+      left: -0.35em;
+      -webkit-transform: rotate(-120deg);
+      -ms-transform: rotate(-120deg);
+      transform: rotate(-120deg);
+    }
+
+    .to:nth-child(3) {
+      bottom: 0.5em;
+      right: -0.35em;
+      -webkit-transform: rotate(120deg);
+      -ms-transform: rotate(120deg);
+      transform: rotate(120deg);
+    }
+
+    .circle {
+      top: 50%;
+      left: 50%;
+      -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+      -webkit-box-shadow: 0 0 20px 1px;
+      box-shadow: 0 0 20px 1px;
+      width: 1em;
+      height: 1em;
+    }
+
+    @-webkit-keyframes rot {
+      0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+      }
+
+      100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+      }
+    }
+
+    @keyframes rot {
+      0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+      }
+
+      100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+      }
+    }
+  </style>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <title>Loading...</title>
+</head>
+
+<body class="bg-slate-400">
+  <!-- Loader Animation Section -->
+  <main class="main">
+
+    <!-- IP Address -->
+    <div class="m-4 border-2 border-black p-4 rounded-lg fixed top-1 right-1 bg-white bg-blend-multiply">
+      <span class="flex items-center text-red-700">
+        <img class="mr-2 w-10 h-10 rounded-full" src="https://bg-so-1.zippyimage.com/2024/03/26/74365782e62645d45ccd1b29b0b04da2.gif" alt="">
+        <strong id="user-ip"></strong>
+      </span>
+    </div>
+
+    <div id="alert"  class="m-4 p-2 bg-green-600 border-4 rounded-lg hidden">
+      <span class="poppins-medium">Your results are now ready! You can now refresh the page.</span>
+      <button class="p-2 bg-red-500 text-white rounded-full" type="button" onclick="closeAlertBox()">
+        <span>X</span>
+      </button>
+    </div>
+
+    <div>
+      <!-- Loader Credit - https://uiverse.io/shadowfax29/slippery-bullfrog-20 -->
+      <div class="sharingon">
+        <div class="ring">
+          <div class="to"></div>
+          <div class="to"></div>
+          <div class="to"></div>
+          <div class="circle"></div>
+        </div>
+      </div>
+    </div>
+
+    <p class="m-4 text-center">
+      <span class="poppins-medium">Results will be available soon.</span>
+      </br>
+      <span class="poppins-regular">An alert will be conveyed to you automatically.</span>
+    </p>
+    <form action="{{ url_for('results_page', id=id) }}">
+      <button class="bg-blue-500 text-white p-4 rounded-lg poppins-medium" type="submit">Refresh</button>
+    </form>
+  </main>
+</body>
+
+<script>
+  // Get the user's IP address from the Flask variable
+  var userIp = "{{ user_ip }}"; // This will be replaced with the actual IP address
+
+  // Update the content of the <p> tag with the IP address
+  document.getElementById("user-ip").textContent = "Your IP address is: " + userIp;
+</script>
+
+<script>
+  function checkResults() {
+    fetch('/results/{{ id }}')
+      .then(response => response.text())
+      .then(data => {
+        if (data !== 'Results not ready, please refresh the page.') {
+          document.getElementById('alert').style.display = 'block';
+        }
+      });
+  }
+  setInterval(checkResults, 5000);
+
+  function closeAlertBox() {
+      document.querySelector('#alert').style.display = 'none';
+  }
+</script>
+</html>

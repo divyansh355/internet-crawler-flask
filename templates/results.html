@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        .main {
+            height: 100%;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+    </style>
+    <!-- Poppins Fonts -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Results</title>
+</head>
+
+<body class="bg-[#111111]">
+    <div class="main p-8">
+        <div class="bg-[#F0f8ff] rounded-2xl text-black p-2 border-4 border-yellow-400">
+            <div class="flex justify-center items-center">
+                <h1 class="mr-2 text-green-700 text-2xl font-medium">{{ num_results }} Results in ({{ execution_time }}
+                    seconds)</h1>
+                <form class="" action="/">
+                    <button class="p-2 bg-blue-500 text-white rounded-lg" type=" submit">
+                        <img class="h-8 w-8" src="https://img.icons8.com/color/48/search--v1.png" alt="search--v1" />
+                    </button>
+                </form>
+            </div>
+
+            {% for url in urls %}
+            </br>
+            <div class="border-b-2 border-black">
+                <span>⇒</span> <a href={{url}} target="_blank">{{ url }}</a>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</body>
+
+</html>
