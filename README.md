@@ -43,25 +43,20 @@ pip install uv
 uv venv
 ```
 
-<p>3. Activate Virtual Environment (macOS Linux)</p>
+<p>3. Activate Virtual Environment</p>
 
 ```
-source .venv/bin/activate
+source .venv/bin/activate    # For macOS, Linux
+.venv\Scripts\activate       # For Windows
 ```
 
-<p>4. Activate Virtual Environment (Windows)</p>
-
-```
-.venv\Scripts\activate
-```
-
-<p>5. To install all the packages in Virtual Environment</p>
+<p>4. To install all the packages in Virtual Environment</p>
 
 ```
 uv pip install -r requirements.txt  
 ```
 
-<p>6. To run app</p>
+<p>5. To run app</p>
 
 ```
 gunicorn app:app
