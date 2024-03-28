@@ -8,11 +8,9 @@
 
 [https://internet-crawler-beta.onrender.com/](https://internet-crawler-beta.onrender.com/)
 
-<h2>Project Screenshots:</h2>
+<h2>Project Demo Video:</h2>
 
-<img src="https://bg-so-1.zippyimage.com/2024/03/27/63a983e04a466582fbbfb9606ce5c57a.png" alt="project-screenshot" width="100%" height="400/">
-
-  
+[Video Link](https://archive.org/embed/demo_20240328/)
   
 <h2>🧐 Features</h2>
 
